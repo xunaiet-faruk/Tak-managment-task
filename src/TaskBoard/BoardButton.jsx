@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AddtaskModal from "./TaskWork/AddtaskModal";
-
+import  './Taskboard.css'
 
 
 const BoardButton = () => {
@@ -14,7 +14,8 @@ const BoardButton = () => {
                         <h1 className="text-xl font-semibold">Filter by  : </h1>
                     </div>
                     <div>
-                        <h1 className="btn bg-[#fbf6fd] px-2 py-1 w-52 rounded-md">Assign Name</h1>
+                      
+                        <input placeholder="Assign Name" type="text" name="" id="" className="btn bg-[#fbf6fd] px-2 py-1 w-52 rounded-md" />
                     </div>
 
                     <div>
@@ -27,9 +28,27 @@ const BoardButton = () => {
                         </select>
                     </div>
 
-                    <div>
-                        <input type="date" name="" id="" className="bg-[#fbf6fd] px-2 py-1 w-52 rounded-md" />
+                    <div className="flex ">
+                        <input
+                            type="date"
+                            id="startDate"
+                            name="startDate"
+                            className="bg-[#fbf6fd] px-2 py-1 w-32 rounded-r-none appearance-none"
+                            placeholder="Start Date"
+                            style={{ paddingRight: '1.5rem' }} // Add right padding to make space for the icon
+                        />
+                     
+                        <input
+                            type="date"
+                            id="endDate"
+                            name="endDate"
+                            className="bg-[#fbf6fd] px-2 py-1 w-32 rounded-l-none"
+                            placeholder="End Date"
+                        />
                     </div>
+
+
+
 
 
                 </div>

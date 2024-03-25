@@ -8,7 +8,7 @@ import Progress from "./TaskWork/Progress";
 const BoardTask = () => {
     return (
         <div className="mt-8">
-            <div className="grid lg:grid-cols-5 gap-20">
+            <div className="grid lg:grid-cols-5 gap-[400px]">
                 <div className="p-4">
                     <PendingTask />
                 </div>
