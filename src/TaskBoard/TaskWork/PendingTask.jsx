@@ -1,6 +1,8 @@
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { useEffect, useRef, useState } from 'react';
+import EditTaskModal from "./EditTaskModal";
 const PendingTask = () => {
+    const [openModal, setOpenModal] = useState(false);
     const [open, setOpen] = useState(false);
     const dropDownRef = useRef(null);
     const items = ['React', 'Angular', 'Vue'];
@@ -36,7 +38,7 @@ const PendingTask = () => {
                                     <button onClick={() => setOpen((prev) => !prev)} className="rounded-sm bg-sky-600 px-2 py-1"><HiOutlineDotsVertical className="text-xl font-bold" /></button>
                                     <ul className={`${open ? 'visible' : 'invisible'} absolute top-12 z-50 right-32  w-full space-y-1 rounded-sm`}>
                                         <div className="bg-white  w-40 border-2 text-black">
-                                            <button className="btn mb-2 hover:h-full hover:bg-sky-400 text-black w-full text-lg">Edit</button><br />
+                                            <button onClick={() => setOpenModal(true)} className="btn mb-2 hover:h-full hover:bg-sky-400 text-black w-full text-lg">Edit</button><br />
                                             <hr className="border-t-2 border-gray-300"></hr>
                                             <button className="btn  hover:text-white  hover:bg-red-600 text-red-500 w-full text-lg">Delete</button>
                                         </div>
@@ -44,6 +46,7 @@ const PendingTask = () => {
 
                                     </ul>
                                 </div>
+                                <EditTaskModal openModal={openModal} setOpenModal={setOpenModal}/>
                             </div>
 
                         </div>

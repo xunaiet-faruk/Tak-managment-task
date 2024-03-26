@@ -35,7 +35,7 @@ const BoardButton = () => {
                             name="startDate"
                             className="bg-[#fbf6fd] px-2 py-1 w-32 rounded-r-none appearance-none"
                             placeholder="Start Date"
-                            style={{ paddingRight: '1.5rem' }} // Add right padding to make space for the icon
+                            style={{ paddingRight: '1.5rem' }} 
                         />
                      
                         <input
